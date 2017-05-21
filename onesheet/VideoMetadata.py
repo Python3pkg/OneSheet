@@ -5,9 +5,7 @@ from onesheet.OExceptions import NoDataException
 from onesheet.TimeBasedMetadata import TimeBasedMetadata
 from abc import ABCMeta
 
-class VideoMetadata(TimeBasedMetadata):
-    __metaclass__ = ABCMeta
-
+class VideoMetadata(TimeBasedMetadata, metaclass=ABCMeta):
     def __init__(self, filename):
         TimeBasedMetadata.__init__(self, filename)
 

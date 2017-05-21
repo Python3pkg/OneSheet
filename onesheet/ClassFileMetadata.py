@@ -62,10 +62,7 @@ class MD5_Generator(threading.Thread):
 
 
 
-class FileMetadata(object):
-    __metaclass__ = ABCMeta
-
-    # data_lock = threading.Lock()
+class FileMetadata(object, metaclass=ABCMeta):
     def __init__(self, sourcefile):
         if not os.path.exists(sourcefile):
             raise IOError(sourcefile + " not found")
@@ -234,7 +231,7 @@ class FileMetadata(object):
                 if verbose:
                     i += BUFFER
                     completed = int((i/total)*100)
-                    print(str(completed) + "%")
+                    print((str(completed) + "%"))
                 sha1.update(chunk)
 
         return sha1.hexdigest()

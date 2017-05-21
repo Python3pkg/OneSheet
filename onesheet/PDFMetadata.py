@@ -3,8 +3,7 @@
 from onesheet import XMPMetadata
 from abc import ABCMeta
 
-class PDFMetadata(XMPMetadata):
-    __metaclass__ = ABCMeta
+class PDFMetadata(XMPMetadata, metaclass=ABCMeta):
     def __init__(self):
         self.___pdfKeywords = None
         self.___pdfPDFVersion = None

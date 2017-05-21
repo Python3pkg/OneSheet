@@ -3,6 +3,5 @@
 from onesheet import CRSMetadata, XMPMetadata, PhotoshopMetadata, AUXMetadata
 from abc import ABCMeta
 
-class XMPImageMetadata(XMPMetadata, PhotoshopMetadata, CRSMetadata, AUXMetadata):
-    __metaclass__ = ABCMeta
+class XMPImageMetadata(XMPMetadata, PhotoshopMetadata, CRSMetadata, AUXMetadata, metaclass=ABCMeta):
     pass

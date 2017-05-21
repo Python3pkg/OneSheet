@@ -2,8 +2,7 @@
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta
 
-class PhotoshopMetadata(object):
-    __metaclass__ = ABCMeta
+class PhotoshopMetadata(object, metaclass=ABCMeta):
     def __init__(self):
         self.___photoshopAuthorsPosition = None
         self.___photoshopCaptionWriter = None

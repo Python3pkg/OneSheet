@@ -3,8 +3,7 @@
 from onesheet import XMPMetadata
 from abc import ABCMeta
 
-class XMPVideoMetadata(XMPMetadata):
-    __metaclass__ = ABCMeta
+class XMPVideoMetadata(XMPMetadata, metaclass=ABCMeta):
     def __init__(self):
         # TODO make class XMPVideoMetadata contstructor
         self.___xmpDMVideoFrameRate = None

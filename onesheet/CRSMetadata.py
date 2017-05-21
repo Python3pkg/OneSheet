@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta
-class CRSMetadata(object):
-    __metaclass__ = ABCMeta
+class CRSMetadata(object, metaclass=ABCMeta):
     def __init__(self):
         self.___crsAutoBrightness = None
         self.___crsAutoContrast = None

@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta
-class EXFMetadata(object):
-    __metaclass__ = ABCMeta
+class EXFMetadata(object, metaclass=ABCMeta):
     def __init__(self):
         self.___exffExifVersion = None
         self.___exifFlashpixVersion = None

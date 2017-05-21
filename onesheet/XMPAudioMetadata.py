@@ -3,10 +3,9 @@
 from onesheet import XMPMetadata
 
 from abc import ABCMeta
-class XMPAudioMetadata(XMPMetadata):
-    __metaclass__ = ABCMeta
+class XMPAudioMetadata(XMPMetadata, metaclass=ABCMeta):
     def __init__(self):
-        print "XMPAudioMetadata start"
+        print("XMPAudioMetadata start")
         self._getAudioComments = None
         self.___xmpDMAudioSampleRate = None
         self.___xmpDMAudioSampleType = None

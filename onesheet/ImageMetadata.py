@@ -3,8 +3,7 @@
 from onesheet import ClassFileMetadata
 from abc import ABCMeta
 
-class ImageMetadata(ClassFileMetadata):
-    __metaclass__ = ABCMeta
+class ImageMetadata(ClassFileMetadata, metaclass=ABCMeta):
     def getImageResolutionHeight(self):
         pass
 

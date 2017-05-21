@@ -3,8 +3,7 @@
 from onesheet import ClassFileMetadata
 from abc import ABCMeta
 
-class DocumentMetadata(ClassFileMetadata):
-    __metaclass__ = ABCMeta
+class DocumentMetadata(ClassFileMetadata, metaclass=ABCMeta):
     def getDocumentType(self):
         return self.___documentType
 

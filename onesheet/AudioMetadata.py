@@ -173,8 +173,7 @@ AUDIO_BIT_DEPTHS = {"u8": "8",
                     "fltp": "32",
                     "dblp": ""}
 
-class AudioMetadata(TimeBasedMetadata):
-    __metaclass__ = ABCMeta
+class AudioMetadata(TimeBasedMetadata, metaclass=ABCMeta):
     AUDIO_CODECS = {"8svx_exp": "8SVX",
                     "8svx_fib": "8SVX",
                     "aac": "AAC",

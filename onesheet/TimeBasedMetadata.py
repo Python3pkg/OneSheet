@@ -9,8 +9,7 @@ from abc import ABCMeta
 from onesheet.OExceptions import NoDataException
 
 
-class TimeBasedMetadata(FileMetadata):
-    __metaclass__ = ABCMeta
+class TimeBasedMetadata(FileMetadata, metaclass=ABCMeta):
     def __init__(self, filename):
         FileMetadata.__init__(self, filename)
         self.raw_stderr = ""
